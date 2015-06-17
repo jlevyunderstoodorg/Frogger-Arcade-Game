@@ -72,10 +72,10 @@ Player.prototype.render = function() {
 };
 
 // Update the player's position
-Player.prototype.update = function(dt) {
+Player.prototype.update = function() {
   // Check if the player has won
     if(this.checkWin()) {
-        player.reset();
+        this.reset();
     }
 };
 
@@ -106,7 +106,7 @@ Player.prototype.checkWin = function() {
     if (this.y <= 0) {
         this.reset();
         score++;
-    };
+    }
 };
 
 // -----INSTANTATION----- //
